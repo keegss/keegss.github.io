@@ -55,6 +55,11 @@ ul.nav {
 
 }
 
+img {
+    width: 50px; /* you can use % */
+    height: auto;
+}
+
 .exp {
     background-color: lightgrey;
     width: 500px;
