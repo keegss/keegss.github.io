@@ -1,146 +1,75 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
-
+  background-color: #f5f5dc;
+  padding: 100px 0px 0px 150px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 180px 500px;
-  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: 500px 700px;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas:
-  "title title"
-  "header header"
-  "sidebar sidebar"
-  "about about"
-  "exp exp"
-  "proj proj"
-  "footer footer";
+  "title ."
+  "about ."
+  "proj ."
+  "extra .";
   grid-gap: 10px;
   padding: 20px;
 }
 
-p {
-  width: 600px;
-}
-
-.about p {
-  padding: 15px;
-}
-
-ul {
-  text-decoration: none;
-  list-style-type: none;
-}
-
-h3 {
-  text-decoration: underline;
-}
-
-h4 {
-  text-decoration: underline;
-  padding-bottom: 4px;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #000;
-    padding: 0;
-}
-
 .title {
   grid-area: title;
-
+  font-size: 18px;
 }
 
-.header {
-  grid-area: header;
-  background-color: lightgrey;
-  padding: 10px;
-  font-size: 13px;
-}
-
-.sidebar {
-  grid-area: sidebar;
-  width: 125px;
-  background-color: lightgrey;
-  padding: 20px;
-}
-
-.sidebar ul {
-  list-style-type: none;
-}
-
-.sidebar li {
-  padding-top: 20px;
-  padding-left: 15px;
-  padding-bottom: 20px;
-}
-
-.sidebar a {
-  diplay: block;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.liLogo
-{
-  width: 50px;
-  height: auto;
-  position: relative;
-  left: 10px;
-}
-
-.gitLogo {
-  width: 70px;
-  height: auto;
-}
 
 .about {
   grid-area: about;
-  background-color: lightgrey;
-  padding: 10px;
-}
-
-.exp {
-  grid-area: exp;
-  background-color: lightgrey;
-  padding: 10px;
+  margin-top: 60px;
+  font-size: 20px;
+  line-height: 35px;
 }
 
 .proj {
   grid-area: proj;
-  background-color: lightgrey;
-  padding: 10px;
+  margin-top: 100px;
+  font-size: 20px;
 }
 
-.footer {
-  grid-area: footer;
-  background-color: lightgrey;
-  padding: 30px;
-  text-align: center;
-  font-size: 10px;
+.extra {
+  grid-area: extra;
+  margin-top: 100px;
+  font-size: 15px;
 }
+
+.about a {
+  padding: 0;
+}
+
+.extra a {
+  padding: 0px 10px;
+  text-decoration: underline;
+}
+
+a:visited { text-decoration: none; color: #000; }
 
 
 @media screen and (min-width: 736px) {
   .grid {
     display: grid;
-    padding: 0;
-    grid-template-columns: 1fr 180px 820px 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 500px 700px;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
-    ". title title ."
-    ". header header ."
-    ". sidebar about ."
-    ". exp exp ."
-    ". proj proj ."
-    ". footer footer .";
+    ". title"
+    ". about"
+    ". proj"
+    ". extra";
+    grid-gap: 10px;
+    padding: 20px;
   }
 }
